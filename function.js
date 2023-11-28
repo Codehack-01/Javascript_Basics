@@ -2,6 +2,18 @@
 /* How to define functions n JS: JS allows us to define functions in different ways . A common way to do this 
 is through a function keyword.
 syntax: */
+
+/* Note: -A function is a set of statements designed to perform a particular task 
+-During a function definition, the names representing the values we intend to supply to the
+function are called parameters
+-During a function call, the actual values provided to the function are called arguments
+-we can use up to 255 parameters in a function definition
+-An anonymous function is a function that does not have a name, and to reuse an anonymous function,
+we have to assign it to a variable
+-An IIFE (Immediately Invoked Function Expression) is a function that is invoked Immediately after it is declared
+-A function should have only one responsibility
+-Function names should be descriptive, straight to the point and timeless */
+
 //Lets write a function that multiplies ay number by two and returns the result:
 function multiplyByTwo(value) {
     const result = value * 2
