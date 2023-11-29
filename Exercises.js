@@ -1,0 +1,1 @@
+//The following are JS exerices starting from basic to advance

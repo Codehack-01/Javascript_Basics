@@ -1,5 +1,6 @@
 //Multi-line comments in JS, shift+Alt+A
-/*--- In JS there are several data types that are used to represent different types of information, like numbers, text, or true/false values */
+/*--- In JS there are several data types that are used to represent different types of information, like numbers, text, or true/false values 
+A collection of multiple values with the same or different data types is called data-structure*/
 //The if-else statement
 /* syntax: if (condition) {
     //condition to run if statement is true
