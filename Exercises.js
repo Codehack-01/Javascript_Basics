@@ -43,7 +43,12 @@ console.log(sentence)
 1.Create an array called fruits with the elements "apple," "banana," and "orange."
 2.Add "grape" to the end of the fruits array.
 3.Remove the first element from the fruits array.
-4.Find the length of the fruits array. */
+4.Find the length of the fruits array.
+5.Given an array of numbers, write a function findMax that returns the maximum number in the array.
+6.Write a function filterEvens that takes an array of numbers and returns a new array containing only the even numbers.
+7.Create a function calculateAverage that takes an array of numbers and returns the average.
+8.Write a function capitalizeWords that takes an array of words and returns a new array with each word capitalized.
+ */
 //1
 const fruits = ['apple', 'banana', 'orange']
 //2
@@ -54,12 +59,15 @@ fruits.shift()
 console.log(fruits)
 //4
 console.log(fruits.length)
+//5
 
 /* Exercise 6: Functions
 1.Create a function called add that takes two parameters, a and b, and returns their sum.
 2.Write a function called isEven that takes a number as an argument and returns true if it's even and false if it's odd.
 3.Define a function greet that takes a name parameter and logs a greeting message.
 4.Create a function called reverseArray that takes an array as an argument and returns a new array with its elements in reverse order.
+5.Write an if-else statement to check if a variable temperature is greater than 30. If true, log "It's a hot day!",
+otherwise log "It's not too hot today."
 */
 //1
 function add (a,b){
@@ -86,10 +94,38 @@ function greet() {
 }
 console.log(greet())
 
-function reverseArray(arr) {
-    //const myArray = myArray.reverse()
-    return arr.reverse()
-
+/* function reverseArray(arr) {
+    let result = arr.reverse()
+    return result
 }
-let reverseArray = ['mango', 'apple', 'grape']
-reverseArray()
+console.log(reverseArray('mango', 'apple', 'cherry')) */
+//4
+function reverseArray(arr) {
+    return arr.reverse()
+}
+let originalArray = ['mango', 'cherry', 'apple']
+let reversedArray = reverseArray(originalArray)
+console.log(reversedArray)
+//5
+function tempUnit(value){
+    if (value > 30) {
+        console.log ("It's a hot day")
+    } else {
+        console.log("It's not too hot today")
+    }
+}
+tempUnit(35)
+tempUnit(25)
+
+/* let arrayNumbers = [1, 5, 2, 8, 3]
+function findMax() {
+    return Math.max(arrayNumbers)
+}
+console.log(findMax()) */
+function findMax(numbers) {
+    return Math.max(numbers)
+}
+const numbers = [1, 5, 2, 8, 3]
+const maxNumber = findMax(numbers)
+console.log(maxNumber)
+
