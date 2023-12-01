@@ -116,6 +116,7 @@ const person2 = {
     }
 }
 person2.sayHello()
+person2.sayHello()
 
 /* The this keyword doesnt work the same way as the first example because it is used in an arrow function. In this case,
 this refers to the global object which doesn't have a fullName property. This can get confusing
