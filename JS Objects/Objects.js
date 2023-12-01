@@ -124,3 +124,58 @@ so its best to avoid using the arrow functions().
 */
 
 /* Adding, Modifying and Removing Properties:  */
+/* You can add new properties to an object using dot or bracket notation. Let's create a new object named
+student and add a new property, gender: */
+const student = {
+    name: 'kachi',
+    age: 17,
+}
+student.gender = 'Male'
+console.log(student)
+
+/* Here's how to use bracket notation to add a new property: */
+student['grade'] = 12
+console.log(student)
+
+/* You can also use the dot and bracket notation to modify an existing property: */
+student.age = 18
+student['grade'] = 13
+console.log(student.age)
+console.log(student.grade)
+console.log(student)
+
+/* JS has an Object.defineProperty() method for adding a new property to an Object. The Object.defineProperty() method
+is a way to define or modify a property on an Object. It is used to control the behavior of a property and make It
+read-only (cannot be modified), non-enumerable(cannot be iterated over), or non-configurable (cannot be deleted or modified)
+Here is how to use it to add a new property to an object: */
+Object.defineProperty(student, 'school', {
+    value: 'University of Lagos',
+    writable: false,
+    enumerable: true,
+    configurable: true,
+})
+console.log(student)
+
+/* The first argument is the object on which to add the propertyName. The second argument is the name of the property.
+The third argument is an object that contains the property's attributes. The value attribute is required, and it
+specifies the value of property. The writeable, enumerable, and configurable attributes are optional. They will default to false
+if you dont specify them. Notice that we set the writable attribute of the school property to false,
+so changing its value wont work */
+student.school = 'Havard University'
+console.log(student.school)
+//To remove a property, you can use the delete keyword:
+delete student.school
+console.log(student.school)
+
+/* Let's try using Object.defineProperty() to add a new property to the student object that cant be deleted: */
+Object.defineProperty(student, 'language', {
+    value: 'English',
+    writeable: true,
+    enumerable: true,
+    configurable: false,
+})
+console.log(student.language)
+delete student.language
+console.log(student.language)
+//The configurable attributes is set to false, so the language property cant be deleted
+
