@@ -12,3 +12,5 @@ with each element containing other elements, which can be thought of as child no
 For example, in an HTML document, a node would represent an element such as paragraph <p>Hello world</p>,
 and the text "Hello World" would be a child node of the paragraph node.
 */
+
+/* JavascripT DOM */
